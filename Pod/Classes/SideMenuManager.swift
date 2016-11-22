@@ -40,7 +40,7 @@ open class SideMenuManager : NSObject {
      - viewSlideInOut: The existing view slides out while the menu slides in.
      - menuDissolveIn: The menu dissolves in over the existing view controller.
      */
-    open static var menuPresentMode: MenuPresentMode = .viewSlideOut
+    open static var menuPresentMode: MenuPresentMode = .menuSlideIn
     
     /// Prevents the same view controller (or a view controller of the same class) from being pushed more than once. Defaults to true.
     open static var menuAllowPushOfSameClassTwice = true
@@ -58,7 +58,7 @@ open class SideMenuManager : NSObject {
     open static var menuAnimationDismissDuration = 0.35
     
     /// Amount to fade the existing view controller when the menu is presented. Default is 0 for no fade. Set to 1 to fade completely.
-    open static var menuAnimationFadeStrength: CGFloat = 0
+    open static var menuAnimationFadeStrength: CGFloat = 0.75
     
     /// The amount to scale the existing view controller or the menu view controller depending on the `menuPresentMode`. Default is 1 for no scaling. Less than 1 will shrink, greater than 1 will grow.
     open static var menuAnimationTransformScaleFactor: CGFloat = 1
